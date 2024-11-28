@@ -9,42 +9,39 @@ Give claude access to your obsidian brain
 On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
 On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
-<details>
-  <summary>Development/Unpublished Servers Configuration</summary>
-  ```
-  "mcpServers": {
-    "obsidian-brain": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "/Users/shubhaankar/github.com/Shubhaankar-Sharma/obsidian_brain",
-        "run",
-        "obsidian-brain"
-      ],
-      "env": {
-        "OBSIDIAN_MIND_PATH": "/path/to/obsidian/vault"
-      }
+#### Development/Unpublished Servers Configuration
+```
+"mcpServers": {
+  "obsidian-brain": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/Users/shubhaankar/github.com/Shubhaankar-Sharma/obsidian_brain",
+      "run",
+      "obsidian-brain"
+    ],
+    "env": {
+      "OBSIDIAN_MIND_PATH": "/path/to/obsidian/vault"
     }
   }
-  ```
-</details>
+}
 
-<details>
-  <summary>Published Servers Configuration</summary>
-  ```
-  "mcpServers": {
-    "obsidian-brain": {
-      "command": "uvx",
-      "args": [
-        "obsidian-brain"
-      ],
-      "env": {
-        "OBSIDIAN_MIND_PATH": "/path/to/obsidian/vault"
-      }
+```
+
+#### Published Servers Configuration 
+```
+"mcpServers": {
+  "obsidian-brain": {
+    "command": "uvx",
+    "args": [
+      "obsidian-brain"
+    ],
+    "env": {
+      "OBSIDIAN_MIND_PATH": "/path/to/obsidian/vault"
     }
   }
-  ```
-</details>
+}
+```
 
 ## Development
 
