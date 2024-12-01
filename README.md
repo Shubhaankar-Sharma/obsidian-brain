@@ -34,10 +34,10 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
   "obsidian-brain": {
     "command": "uvx",
     "args": [
-      "obsidian-brain"
+      "obsidian-brain@0.1.3"
     ],
     "env": {
-      "OBSIDIAN_MIND_PATH": "/path/to/obsidian/vault"
+      "OBSIDIAN_MIND_PATH": "/Users/myuser/path/to/obsidian/vault/"
     }
   }
 }

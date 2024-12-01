@@ -55,10 +55,11 @@ class EnhancedMind:
         if not self.mind_path.exists():
             raise ValueError(f"Mind path does not exist: {mind_path}")
 
-        self.index_path = Path("./index")
+        # create dir if not exist
+        data_home = os.environ.get('XDG_DATA_HOME', os.path.expanduser('~/.local/share'))
+        self.index_path = Path(data_home) / 'obsidian-brain'
         self.bm25_path = self.index_path / "bm25_state.pkl"
-
-        self.index_path.mkdir(parents=True, exist_ok=True)
+        os.makedirs(self.index_path, mode=0o755, exist_ok=True)
 
         self.db = lancedb.connect(self.index_path)
         self.store = LanceDB(self.db, table_name="mind", embedding=hf)
