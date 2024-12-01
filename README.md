@@ -9,6 +9,24 @@ Give claude access to your obsidian brain
 On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
 On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
+
+#### Published Servers Configuration 
+```
+"mcpServers": {
+  "obsidian-brain": {
+    "command": "uvx",
+    "args": [
+      "obsidian-brain@0.1.3"
+    ],
+    "env": {
+      "OBSIDIAN_MIND_PATH": "/Users/myuser/path/to/obsidian/vault/"
+    }
+  }
+}
+```
+
+## Development
+
 #### Development/Unpublished Servers Configuration
 ```
 "mcpServers": {
@@ -27,23 +45,6 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 }
 
 ```
-
-#### Published Servers Configuration 
-```
-"mcpServers": {
-  "obsidian-brain": {
-    "command": "uvx",
-    "args": [
-      "obsidian-brain@0.1.3"
-    ],
-    "env": {
-      "OBSIDIAN_MIND_PATH": "/Users/myuser/path/to/obsidian/vault/"
-    }
-  }
-}
-```
-
-## Development
 
 ### Building and Publishing
 
